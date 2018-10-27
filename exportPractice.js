@@ -1,20 +1,27 @@
-var storage = [3,5,11,7,22]
+var storage = []
 // console.log(storage)
-var sort = storage.sort(function(a,b){
-  return a-b
-});
 
-console.log(sort)
+
+// console.log(sort)
 
 module.exports = {
   store: function (a){
+
     storage.push(a);
-    // return storage;
   },
-  sort: function(a,b){
-      // return a-b;
-    }
+  // getSort: function(a,b){
+  //   console.log("shit fuck")
+  //   return a - b
+  // }
+  getSort: function(){
+    var sort = storage.sort(function(a,b){
+
+      return a-b
+    });
+
+    return sort.slice();
   }
+}
 // console.log(storage)
 
 
